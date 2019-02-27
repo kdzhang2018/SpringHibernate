@@ -19,5 +19,12 @@ public class TrackCoach implements Coach {
 	public String getDailyForture() {
 		return "Just do it: " + fortuneService.getForture();
 	}
-
+	
+	public void doMyStartupStuff() {
+		System.out.println("TrackCoach: start up");
+	}
+	
+	public void doMyCleanupStuff() {
+		System.out.println("TrackCoach: clean up");
+	}
 }
