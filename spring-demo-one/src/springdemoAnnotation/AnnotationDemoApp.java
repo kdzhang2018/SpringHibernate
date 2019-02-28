@@ -11,6 +11,9 @@ public class AnnotationDemoApp {
 		
 		// Default component names
 		TennisCoach theCoach = context.getBean("tennisCoach", TennisCoach.class);
+		//TennisCoach alphaCoach = context.getBean("tennisCoach", TennisCoach.class);
+		
+		//System.out.println("Pointing to the same object: " + (theCoach == alphaCoach));
 		
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());

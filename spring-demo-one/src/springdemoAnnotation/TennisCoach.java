@@ -1,12 +1,18 @@
 package springdemoAnnotation;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //@Component("thatSillyCoach")
 @Component
+//default singleton
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 	// field injection
 	@Autowired
@@ -58,5 +64,15 @@ public class TennisCoach implements Coach {
 
 	public String getTeam() {
 		return team;
+	}
+	
+	@PreDestroy
+	public void doSomeCleanupStuff() {
+		System.out.println("TennisCoach: doSomeCleanupStuff");
+	}
+	
+	@PostConstruct
+	public void doSomeStartupStuff() {
+		System.out.println("TennisCoach: doSomeStartupStuff");
 	}
 }
