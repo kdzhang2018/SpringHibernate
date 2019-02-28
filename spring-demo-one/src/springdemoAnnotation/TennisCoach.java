@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 //default singleton
 //@Scope("prototype")
 public class TennisCoach implements Coach {
+	
 	// field injection
 	@Autowired
 	@Qualifier("randomFortuneService")
