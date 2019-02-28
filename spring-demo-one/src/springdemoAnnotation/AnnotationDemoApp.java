@@ -10,9 +10,13 @@ public class AnnotationDemoApp {
 		//Coach theCoach = context.getBean("thatSillyCoach", Coach.class);
 		
 		// Default component names
-		Coach theCoach = context.getBean("tennisCoach", Coach.class);
+		TennisCoach theCoach = context.getBean("tennisCoach", TennisCoach.class);
 		
 		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyFortune());
+		
+		System.out.println(theCoach.getTeam());
+		System.out.println(theCoach.getEmailAddress());
 		
 		context.close();
 

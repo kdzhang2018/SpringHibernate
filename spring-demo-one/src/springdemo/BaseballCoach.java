@@ -13,7 +13,7 @@ public class BaseballCoach implements Coach {
 	}
 
 	@Override
-	public String getDailyForture() {
-		return fortureService.getForture();
+	public String getDailyFortune() {
+		return fortureService.getFortune();
 	}
 }

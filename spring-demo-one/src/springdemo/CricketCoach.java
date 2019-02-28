@@ -37,8 +37,8 @@ public class CricketCoach implements Coach {
 	}
 
 	@Override
-	public String getDailyForture() {
-		return fortuneService.getForture();
+	public String getDailyFortune() {
+		return fortuneService.getFortune();
 	}
 
 }

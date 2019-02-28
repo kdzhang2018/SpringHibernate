@@ -16,8 +16,8 @@ public class TrackCoach implements Coach {
 	}
 
 	@Override
-	public String getDailyForture() {
-		return "Just do it: " + fortuneService.getForture();
+	public String getDailyFortune() {
+		return "Just do it: " + fortuneService.getFortune();
 	}
 	
 	public void doMyStartupStuff() {
